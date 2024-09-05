@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+
+<form method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}  <!-- the name of variable form in the views.py -->
+
+    <input type="submit">
+
+</form>
+
+{% endblock %}
